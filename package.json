@@ -1,7 +1,7 @@
 {
-  "name": "grocery",
+  "name": "goalseek",
   "version": "1.0.0",
-  "description": "Grocery",
+  "description": "goalseek",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -9,14 +9,14 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wHitedeVil4561/grocery.git"
+    "url": "git+https://github.com/wHitedeVil4561/goalseek.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wHitedeVil4561/grocery/issues"
+    "url": "https://github.com/wHitedeVil4561/goalseek/issues"
   },
-  "homepage": "https://github.com/wHitedeVil4561/grocery#readme",
+  "homepage": "https://github.com/wHitedeVil4561/goalseek#readme",
   "dependencies": {
     "@apollo/server": "^4.10.4",
     "body-parser": "^1.20.2",
