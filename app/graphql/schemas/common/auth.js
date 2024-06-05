@@ -5,13 +5,25 @@ export const authTypeDefs =  `#graphql
         role:Int
     }
     type LoginResponse {
+        message:String
+        id:ID!
+        name:String!
+        email:String!
+        phone:String
+        token:String!
+        otp:Int
+    }
+    type VerifyOtpResponse {
+        message:String
         id:ID!
         name:String!
         email:String!
         phone:String
         token:String!
     }
-    type Mutation{
+
+    type Mutation {
         login(payload:LoginInput!):LoginResponse
+        verifyOTP(otp:Int!):VerifyOtpResponse
     }
 `;

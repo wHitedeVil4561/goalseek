@@ -8,23 +8,22 @@ export default (sequelize, DataTypes) => {
       primaryKey: true,
     },
     otp: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     invalidAttemptCount: {
       type: DataTypes.INTEGER,
       defaultValue:0
     },
-    attemptAt:{
+    firstInvalidAttemptAt:{
         type: DataTypes.DATE,
-        allowNull:false
     },
   },{
     timestamps:true,
     paranoid:true,
   });
   otp.association = (db)=>{
-    otp.belongsTo(db.Employee);
+    otp.belongsTo(db.Employee,{foreignKey:'employed_id'});
   }
   return otp;
 };

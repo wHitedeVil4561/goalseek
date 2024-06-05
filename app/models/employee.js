@@ -66,7 +66,7 @@ export default (sequelize, DataTypes) => {
     employee.belongsTo(db.Gender);
     employee.belongsTo(db.City);
     employee.hasMany(db.Session);
-    employee.hasOne(db.Otp);
+    employee.hasOne(db.Otp,{foreignKey:'employed_id'});
     
   }
   return employee;

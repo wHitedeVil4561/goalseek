@@ -22,8 +22,9 @@ apolloServer.start().then(() => {
     bodyParser.json(),
     expressMiddleware(apolloServer, {
       context: ({ req }) => {
-        const user = req.auth ? req.auth : null;
-        return { user, db };
+        console.log(req.headers);
+        const bearerToken = req.headers["authorization"];
+        return { bearerToken, db };
       },
     })
   );
